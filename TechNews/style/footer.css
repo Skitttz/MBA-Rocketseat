@@ -1,0 +1,13 @@
+footer{
+  padding: 42px 0 24px 0;
+  font: var(--text-sm);
+}
+
+footer nav{
+  display: flex;
+  gap: 16px;
+}
+
+footer nav p{
+  margin-right: auto;
+}

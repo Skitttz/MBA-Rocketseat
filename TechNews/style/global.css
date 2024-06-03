@@ -1,0 +1,135 @@
+:root {
+  /* Product */
+  --brand-color-light: #60a5fa;
+  --brand-color-dark: #1d4ed8;
+
+  /* Base */
+  --bg-color: #0f172a;
+  --stroke-color: #1e293b;
+
+  /* Text */
+  --text-color-primary: #f1f5f5;
+  --text-color-secondary: #cbd5e1;
+
+  /* Font */
+  --text-2xl: 800 24px/135% var(--font-family);
+  --text-xl: 800 16px/140% var(--font-family);
+  --text-lg: 800 14px/140% var(--font-family);
+  --text-span: 600 14px/145% var(--font-family);
+  --text-base: 400 16px/140% var(--font-family);
+  --text-sm: 400 14px/160% var(--font-family);
+
+  --font-family: 'Archivo',sans-serif;
+
+}
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body{
+  color: var(--text-color-primary);
+  background-color: var(--bg-color);
+}
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.5s ease;
+}
+
+a:hover{
+  color: var(--brand-color-light);
+}
+
+img{
+  width: 100%;
+}
+
+h1,h2,h3{
+  font: inherit;
+}
+
+.container{
+  max-width: 1280px;
+  padding-inline: 32px;
+  margin-inline: auto;
+}
+
+.card{
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  &::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    background: linear-gradient(180deg,transparent 0%,#020617 100%);
+  }
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: 24px;
+    &:has(.text-lg){
+      padding:12px;
+    }
+    h2 {
+      margin-top: 8px;
+    }
+    h3 {
+      margin-top: 8px;
+    }
+  }
+}
+
+.cardMostRead{
+  position: relative;
+  overflow: hidden;
+  span{ position: absolute;
+    top: 0;
+    margin: 8px;
+  }
+}
+
+#mostRead header > a > img,#ia header > a > img, #side header > a > img {
+  max-width: 16px;
+}
+
+#mostRead,.articleIAm,#highlightsIA header{
+  border-top: 1px solid var(--stroke-color);
+}
+
+#highlightsMain {
+  grid-area: highlightsMain;
+}
+
+#mostRead {
+  grid-area: mostRead;
+}
+
+#ia {
+  grid-area: ia;
+}
+
+#side {
+  grid-area: side;
+}
+
+
+main {
+  grid-template-columns: 2fr 1.5fr;
+  grid-template-areas: 
+  "highlightsMain highlightsMain"
+  "mostRead mostRead"
+  "ia side";
+  column-gap: 32px;
+  row-gap: 80px;
+  margin-top: 40px;
+}
+

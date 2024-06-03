@@ -1,0 +1,64 @@
+.grid{
+  display: grid;
+}
+
+.flex{
+  display: flex;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.justify-content-sb{
+  justify-content: space-between;
+}
+
+.grid-cols-2{
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-cols-4{
+  grid-template-columns: repeat(4,1fr);
+}
+
+.grid-flow-col{
+  grid-auto-flow: column;
+}
+
+.gap-1 {
+  gap:4px;
+}
+
+.gap-4{
+  gap: 16px;
+}
+
+.gap-8{
+  gap:32px;
+}
+
+.mt-1{
+  margin-top: 8px;
+}
+
+.mt-32{
+  margin-top: 32px;
+}
+
+.pt-2{
+  padding-top: 12px;
+}
+
+.pb-4{
+  padding-bottom: 24px;
+}
+
+.text-2xl{font:var(--text-2xl)}
+.text-xl{font:var(--text-xl)}
+.text-lg{font:var(--text-lg)}
+.text-span{font:var(--text-span)}
+.text-base{font:var(--text-base)}
+.text-sm{font:var(--text-sm)}
+
+

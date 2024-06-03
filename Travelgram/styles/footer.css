@@ -1,0 +1,14 @@
+.containerFooter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.containerFooter nav {
+  padding: 24px 32px;
+  display: flex;
+  gap: 24px;
+}
+
+footer .containerFooter nav p{
+  margin-right: auto;
+}

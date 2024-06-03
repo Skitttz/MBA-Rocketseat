@@ -1,0 +1,20 @@
+#highlightsMain{
+  column-gap: 16px;
+}
+
+#highlightsMain img{
+  object-fit: cover;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.content-tag{
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: var(--brand-color-dark);
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font: 500 10px/1.2 var(--font-family);
+  box-shadow: 0 4px 16px rgba(2,6,23,0.25);
+}

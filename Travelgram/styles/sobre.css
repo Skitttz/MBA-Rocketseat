@@ -1,0 +1,65 @@
+#sobre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--surface-color);
+}
+
+#sobre h1 {
+  font: var(--text-lg);
+  color: var(--text-color-primary);
+  margin-bottom: 8px;
+}
+
+.sobreInfo {
+  display: flex;
+  gap: 0 32px;
+}
+
+.sobreInfo p {
+  font: var(--text-md);
+}
+
+.lista li {
+  display: flex;
+  align-items: center;
+}
+
+.lista li {
+  font: var(--text-md);
+}
+
+.sobreInfo p {
+  line-height: 170%;
+  font-size: 14px;
+}
+
+#sobre {
+  width: 100%;
+  justify-content: center;
+}
+
+#sobre .containerSobre {
+  padding: 32px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 16px 0;
+  justify-self: flex-end;
+}
+
+.lista li span {
+  margin-left: 8px;
+}
+
+.lista{
+  width: 280px;
+}

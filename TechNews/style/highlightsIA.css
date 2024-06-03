@@ -1,0 +1,11 @@
+#ia article div:not(.lookHere) img{
+  width: 176px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+#ia h3{
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+

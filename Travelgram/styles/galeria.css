@@ -1,0 +1,22 @@
+#galeriaFotos {
+  background-color: var(--background-color);
+  width: 100%;
+}
+
+#galeriaFotos .containerGaleriaFotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(287px, auto));
+  padding: 24px 32px;
+  gap: 24px;
+  margin:0 auto;
+}
+
+#galeriaFotos img{
+  width:287px;
+  height: 287px;
+  object-fit: cover;
+}
+
+.containerFooter p {
+  margin-right: auto;
+}

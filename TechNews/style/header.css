@@ -1,0 +1,37 @@
+#navPrimary{
+  width: 100%;
+}
+
+#navPrimary div:first-child{
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+#navPrimary a{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#navPrimary h1{
+  font: var(--text-2xl);
+  color: var(--brand-color-light);
+  text-transform: uppercase;
+}
+
+#navSecondary{
+  padding: 14px 0px;
+  border: solid var(--stroke-color) 1px;
+  border-inline: none;
+}
+
+#navSecondary div:first-child{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navSecondary div a{
+  font: var(--text-span);
+}

@@ -1,0 +1,39 @@
+#navegacao,
+#topo {
+  display: flex;
+}
+
+#topoHeader img {
+  cursor: pointer;
+}
+
+#navegacao {
+  gap: 0 16px;
+  align-items: center;
+}
+
+#navegacao a:first-child{
+  display: flex;
+  align-items: center;
+}
+
+
+#navegacao a:hover{
+  color: var(--brand-color)
+}
+
+header {
+  background-color: var(--surface-color);
+}
+
+#topoHeader {
+  width: 100%;
+}
+
+#topoHeader .container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+}
