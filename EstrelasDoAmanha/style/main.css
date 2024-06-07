@@ -1,0 +1,11 @@
+.header-text h3{
+  font: 600 1.5rem/125% var(--font-family);
+  margin-bottom: 8px;
+  & > span{
+    color: var(--text-secondary);
+  }
+}
+
+.header-back > a > img{
+    max-width: 24px;
+}

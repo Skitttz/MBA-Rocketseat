@@ -1,0 +1,14 @@
+.aside-container h1{
+  font: 600 2.5rem/125% var(--font-family);
+  margin: 8px 0 8px 0;
+}
+
+.aside-container h1 > span{
+  color: var(--text-highlight);
+}
+
+.aside-container p{
+  font-size: 1rem;
+  line-height: 150%;
+  color: var(--text-secondary);
+}

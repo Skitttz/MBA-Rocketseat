@@ -1,0 +1,24 @@
+aside, main{
+  padding: 4rem;
+} 
+
+main{
+  overflow: auto;
+  & .main-container{
+    max-width: 33rem;
+    margin-left: auto;
+  }
+}
+
+
+aside{  
+  background-color: var(--surface-secondary);
+& .aside-container{
+  max-width: 31rem;
+
+  /* Illustrator */
+  & > img{
+    margin-top: 2rem;
+  }
+}
+}

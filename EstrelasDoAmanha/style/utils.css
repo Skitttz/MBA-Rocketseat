@@ -1,0 +1,43 @@
+.flex{
+  display: flex;
+}
+
+.fixed{
+  display: fixed;
+}
+
+.grid{
+  display: grid;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.gap-1{
+  gap: 4px;
+}
+
+.gap-2{
+  gap: 8px;
+}
+
+.gap-3{
+  gap:12;
+}
+
+.gap-4{
+  gap:16px;
+}
+
+.gap-5{
+  gap:24px;
+}
