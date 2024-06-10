@@ -12,3 +12,7 @@
   line-height: 150%;
   color: var(--text-secondary);
 }
+
+.aside-container > img{
+  margin-top: 2rem;
+}
