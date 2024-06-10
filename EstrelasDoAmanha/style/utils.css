@@ -14,6 +14,10 @@
   flex-direction: column;
 }
 
+.flex-row{
+  flex-direction: row;
+}
+
 .items-center{
   align-items: center;
 }
@@ -22,12 +26,20 @@
   justify-content: center;
 }
 
+.mt-1{
+  margin-top: 0.25rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
 .gap-1{
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .gap-2{
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .gap-3{
@@ -35,9 +47,22 @@
 }
 
 .gap-4{
-  gap:16px;
+  gap:1rem;
 }
 
 .gap-5{
-  gap:24px;
+  gap:1.5rem;
 }
+
+.gap-20p{
+  gap:1.25rem;
+}
+
+.flex-1{
+  flex: 1;
+}
+
+.flex-2{
+  flex: 2;
+}
+

@@ -2,7 +2,7 @@
   /* Brand */
   --brand-light: #F67841;
   --brand-mid:#F3541C;
-  --brand-dar: #E43A12;
+  --brand-dark: #E43A12;
 
   /* Text */
   --text-primary: #292524;
@@ -36,6 +36,7 @@
   --text-md: 700 24px/120% var(--font-family);
   --text-base: 700 20px/120% var(--font-family);
   --text-sm: 700 16px/120% var(--font-family);
+  --text-xs:  400 0.875rem/140% var(--font-family);
 }
 
 *{

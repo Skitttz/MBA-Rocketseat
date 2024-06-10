@@ -6,17 +6,18 @@ main{
   overflow: auto;
   & .main-container{
     max-width: 33rem;
+
+    /* teste */
     margin-left: auto;
   }
 }
-
 
 aside{  
   background-color: var(--surface-secondary);
 & .aside-container{
   max-width: 31rem;
 
-  /* Illustrator */
+  /* Illustrator */z
   & > img{
     margin-top: 2rem;
   }

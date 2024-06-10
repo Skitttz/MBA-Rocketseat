@@ -63,6 +63,151 @@
               </div>
             </div>
           </fieldset>
+          <fieldset class="address">
+            <legend>Endereço residencial</legend>
+            <div class="input-wrapper">
+              <label for="cep">CEP</label>
+              <input type="text" id="cep" name="cep" value="01234-567">
+            </div>
+
+            <div class="flex flex-row gap-20p">
+              <div class="input-wrapper flex-2">
+                <label for="street">Rua</label>
+                <input type="text" id="street" name="street" value="Rua das Flores" disabled>
+              </div>
+              <div class="input-wrapper flex-1">
+                <label for="number">Número</label>
+                <input type="number" id="number" name="number" value="123">
+              </div>
+            </div>
+            <div class="flex flex-row gap-20p">
+              <div class="input-wrapper flex-2">
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="city" value="São Paulo" disabled>
+              </div>
+              <div class="input-wrapper flex-1">
+                <label for="state">Estado</label>
+                <input type="text" id="state" name="state" value="SP" disabled>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="info-parent">
+            <legend>Informações do responsável</legend>
+
+            <div class="input-wrapper">
+              <label for="parentName">Nome do responsável</label>
+              <input type="text" id="parentName" name="parentName" value="Miguel Roberto Alves">
+              <span class="alert-parent">Principal responsável legal e contato de emergência</span>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="phone">Telefone</label>
+              <input type="tel" id="phone" name="phone" value="(10) 9 8765-4321">
+            </div>
+            <div class="input-wrapper">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required>
+              <div class="error flex flex-row gap-1 mt-1"> <img src="assets/alert-circle.svg" alt="Icone Alerta Erro"> <span>Insira um e-mail valido</span></div>
+            </div>
+          </fieldset>
+          <fieldset class="option-enrollment">
+            <legend>Opções de matrícula</legend>
+
+            <div class="input-wrapper">
+              <label>Selecione o turno de estudo</label>
+              <div class="radio-wrapper">
+                <div class="radio-inner">
+                  <div class="radio-image">
+                  </div>
+                  <img src="assets/sun-cloud-02.svg" alt="Icone de Sol com nuvem">
+                  <input type="radio" name="study-shift" id="morning" value="evening">
+                  </input>
+                  <label for="morning">Manhã</label>
+                  </input>
+                </div>
+                <div class="radio-inner">
+                  <div class="radio-image">
+                  </div>
+                  <img src="assets/sun-02.svg" alt="Icone de Sol">
+                  <input type="radio" name="study-shift" id="evening" value="evening">
+                  </input>
+                  <label for="evening">Tarde</label>
+                  </input>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label>Em qual esporte você gostaria de inscrever seu filho?</label>
+              <div class="radio-wrapper">
+                <div class="radio-inner">
+                  <div class="radio-image"></div>
+                  <input type="radio" name="sport" id="football">
+                  <img src="./assets/football.svg" alt="Bola de Futebol">
+                  <label for="football">Futebol</label>
+                </div>
+
+                <div class="radio-wrapper">
+                  <div class="radio-inner">
+                    <div class="radio-image"></div>
+                    <input type="radio" name="sport" id="basket">
+                    <img src="./assets/basketball-02.svg" alt="Bola de Basquete">
+                    <label for="basket">Basquete</label>
+                  </div>
+                </div>
+
+
+                <div class="radio-wrapper">
+                  <div class="radio-inner">
+                    <div class="radio-image"></div>
+                    <input type="radio" name="sport" id="swimming">
+                    <img src="./assets/swimming.svg" alt="Natacao">
+                    <label for="swimming">Natacao</label>
+                  </div>
+                </div>
+
+
+                <div class="radio-wrapper">
+                  <div class="radio-inner">
+                    <div class="radio-image"></div>
+                    <input type="radio" name="sport" id="yoga">
+                    <img src="./assets/yoga-02.svg" alt="Yoga">
+                    <label for="yoga">Yoga</label>
+                  </div>
+                </div>
+
+
+                <div class="radio-wrapper">
+                  <div class="radio-inner">
+                    <div class="radio-image"></div>
+                    <input type="radio" name="sport">
+                    <img src="./assets/volleyball.svg" alt="Bola de Volei">
+                    <label for="">Volei</label>
+                  </div>
+                </div>
+
+
+                <div class="radio-wrapper">
+                  <div class="radio-inner">
+                    <div class="radio-image"></div>
+                    <input type="radio" name="sport">
+                    <img src="./assets/boxing-glove-01.svg" alt="Luva de boxe">
+                    <label for="boxe">Boxe</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="flex terms-wrapper input-wrapper checkbox-wrapper">
+            <div class="check-image"></div>
+            <input type="checkbox" name="terms" id="terms">
+            <label for="terms">Declaro que li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade</strong> da escola Estrela do Amanhã. </label>
+          </div>
+
+          <div class="actions-wrapper">
+            <button class="btn-secondary" type="button">Salvar respostas</button>
+            <button class="btn-primary" type="submit">Fazer matricula</button>
+          </div>
         </form>
       </div>
     </main>
