@@ -1,0 +1,73 @@
+.btn {
+  transition: all ease-in-out .2s;
+  --btn-bg-color: var(--text-color-primary);
+  --btn-color: var(--background-color);
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  border-radius: .5rem;
+  font: var(--font-medium) var(--size-base)/1.5rem var(--font-family);
+  cursor: pointer;
+
+  background: var(--btn-bg-color);
+  color: var(--btn-color);
+}
+
+.btn:hover {
+  --btn-bg-color: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+  --btn-color: var(--surface-color);
+}
+
+.btn-sm {
+  padding: .5rem 1rem;
+  font-size: var(--size-sm);
+}
+
+.btn-md {
+  padding: .75rem 1.5rem;
+  font-size: var(--size-base);
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.btn[aria-label] {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    inset: 0.0938rem;
+    background-color: var(--background-color);
+  }
+
+  &::after {
+    z-index: 1000;
+    content: attr(aria-label);
+    background: var(--btn-bg-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+
+@media (width >=80em) {
+
+  .btn-sm {
+    padding: .75rem 1.5rem;
+    font-size: var(--size-base);
+  }
+
+  .btn-md {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+}
