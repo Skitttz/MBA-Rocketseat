@@ -1,0 +1,33 @@
+.smartphones-img {
+  margin-top: 5rem;
+  /* bg-hero-desktop is gradient color background not only desktop this refer for mobile */
+  background: url(../assets/bg-hero-desktop.svg) top/cover;
+}
+
+section {
+  & header {
+    & strong {
+      display: block;
+      font: var(--font-medium) var(--size-sm)/100% var(--font-family);
+      letter-spacing: 0.08em;
+      color: var(--brand-color-primary);
+      text-transform: uppercase;
+    }
+
+    & h2 {
+      margin-top: .5rem;
+    }
+  }
+
+  & p {
+    margin-top: .5rem;
+    color: var(--text-color-secondary);
+  }
+}
+
+
+@media(width >=80em) {
+  .smartphones-img {
+    display: none;
+  }
+}
