@@ -1,6 +1,6 @@
 footer {
   color: var(--text-color-secondary);
-  font-weight: var(--fw-md);
+  font-weight: var(--font-medium);
 
   & .container {
     padding-inline: 3rem;
