@@ -86,10 +86,10 @@ ul[role="list"] {
 
 
 html {
-
   font: var(--text-base);
   color: var(--text-color-primary);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 img {
