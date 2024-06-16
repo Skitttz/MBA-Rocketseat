@@ -8,3 +8,6 @@
 @import url(about.css);
 @import url(features.css)(width >=80rem);
 @import url(cards.css);
+@import url(princing.css);
+@import url(download.css);
+@import url(footer.css);
