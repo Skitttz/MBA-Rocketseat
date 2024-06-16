@@ -1,0 +1,48 @@
+:root {
+  /* Cores  */
+  --snitap-sun: #FFCD1E;
+  --snitap-sky-mid: #06B6D4;
+  --snitap-sky-light: #67E8F9;
+  --snitap-joy-mid: #DB2777;
+  --snitap-joy-light: #F472B6;
+  --snitap-leaft-mid: #16A34A;
+
+  /* Base  */
+  --text: #0000;
+  --highlights: #0000;
+  --background: #FAFAFA;
+
+  /* Font Syne  */
+
+  --font-family-syne: "Syne", sans-serif;
+
+  --size-heading1: 4rem;
+  --size-heading2: 2.5rem;
+
+  --line-height-heading1: 125%;
+  --line-height-heading2: 120%;
+
+  --font-w-heading1: 700;
+  --font-w-heading2: 700;
+
+  --font-heading1: var(--font-w-heading1) var(--size-heading1)/var(--line-height-heading1) var(--font-family-syne);
+
+  --font-heading2: var(--font-w-heading2) var(--size-heading2)/var(--line-height-heading2) var(--font-family-syne);
+
+  /* Font Montserrat  */
+
+  --font-family-mont: "Montserrat", sans-serif;
+
+  --size-button-label: 1rem;
+  --size-span: 0.875rem;
+
+  --line-height-button-label: 150%;
+  --line-height-span: 150%;
+
+  --font-w-button-label: 500;
+  --font-w-span: 500;
+
+  --font-montserrat-button-label: var(--font-w-button-label) var(--size-button-label)/var(--line-height-button-label) var(--font-family-mont);
+
+  --font-montserrat-span: var(--font-w-span) var(--size-span)/var(--line-height-button-label) var(--font-family-mont);
+}
