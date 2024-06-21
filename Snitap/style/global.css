@@ -46,3 +46,36 @@
 
   --font-montserrat-span: var(--font-w-span) var(--size-span)/var(--line-height-button-label) var(--font-family-mont);
 }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+button {
+  font: 500 1rem/1.5 var(--font-family-mont);
+}
+
+h1,
+h2 {
+  font-family: var(--font-family-syne);
+}
+
+h1 {
+  font-size: var(--size-heading1);
+  line-height: var(--line-height-heading1)
+}
+
+h2 {
+  font-size: var(--size-heading2);
+  line-height: var(--line-height-heading2)
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
