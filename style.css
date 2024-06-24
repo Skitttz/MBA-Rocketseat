@@ -1,36 +1,38 @@
-:root{
-    /* Set neon color */
+:root {
+  /* Set neon color */
   --neon-text-color: #f9f9f9;
   --neon-border-color: #2661bf;
   --gradient-begin: #FAF8F9;
   --gradient-end: #F0EFF0;
 }
 
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
 
-li{
+li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-html{
+html {
   height: 100%;
 }
+
 body {
   overflow: hidden;
   min-height: 100%;
-  background: linear-gradient(90deg, #500a91 0%, #2f0d4f 100%);}
-  
-  main{
+  background: linear-gradient(90deg, #500a91 0%, #2f0d4f 100%);
+}
+
+main {
   height: 100vh;
   display: grid;
   align-items: center;
@@ -38,58 +40,76 @@ body {
   padding: 24px;
 }
 
-.container{
+.container {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.title-area{
+
+.title-area {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
 }
 
-.title{
+.title {
   font-size: xx-large;
   color: #f9f9f9;
   font-weight: 500;
   user-select: none;
   z-index: 10;
   color: var(--neon-text-color);
-  animation: textflicker 5s infinite alternate-reverse;    
+  animation: textflicker 5s infinite alternate-reverse;
 }
 
-.rocket{
+.rocket {
   cursor: grab;
   user-select: none;
   font-size: 32px;
 }
 
-.launch{
+.launch {
   animation: launch 5s forwards;
 }
 
 .link-list {
   position: relative;
-  padding:24px;
+  padding: 24px;
   border-radius: 6px;
   min-width: 400px;
   display: grid;
   align-items: center;
   gap: 15px;
-  grid-template-columns: repeat(3,minmax(150px,1fr));
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
   border: 0.1px solid #fff;
-  background-color:var(--neon-border-color);
+  background-color: var(--neon-border-color);
 }
 
-.link-list:hover{
-  animation: flicker 2s infinite backwards;    
+.link-list:hover {
+  animation: flicker 2s infinite backwards;
 }
 
-.link{
+@media (width <=40rem) {
+
+  .title {
+    font-size: x-large;
+  }
+
+  .link-list {
+    grid-template-columns: 1fr;
+    min-width: 220px;
+  }
+
+  .link {
+    padding-inline: 2px;
+    padding-block: 4px;
+  }
+}
+
+.link {
   padding-inline: 4px;
   padding-block: 8px;
   border: #182848 solid 1px;
@@ -102,53 +122,79 @@ body {
   background: linear-gradient(33deg, var(--gradient-begin), var(--gradient-end));
   transition: opacity .2s ease-out;
   box-shadow: 0 5px 10px #0002;
-  &:before { background-color: var(--gradient-begin); }
-  &:after { content: var(--gradient-start-text); }
+
+  &:before {
+    background-color: var(--gradient-begin);
+  }
+
+  &:after {
+    content: var(--gradient-start-text);
+  }
 }
 
-.link:hover{
+.link:hover {
   opacity: 0.8;
 }
 
 @keyframes flicker {
-    
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      
 
-        box-shadow:
-            0 0 .1rem #4b6cb7,
-            inset 0 0 .5rem #4b6cb7,
-            0 0 1rem var(--neon-border-color),
-            inset 0 0 1rem var(--neon-border-color),
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color);        
-    }
-    
-    20%, 24%, 55% {        
-        box-shadow: none;
-    }    
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+
+
+    box-shadow:
+      0 0 .1rem #4b6cb7,
+      inset 0 0 .5rem #4b6cb7,
+      0 0 1rem var(--neon-border-color),
+      inset 0 0 1rem var(--neon-border-color),
+      0 0 2rem var(--neon-border-color),
+      inset 0 0 2rem var(--neon-border-color);
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
 }
 
 
 @keyframes textflicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      
-      text-shadow:
-          -0.1rem -0.1rem .5rem #fff,
-          0.1rem 0.1rem .5rem #fff,
-          0 0 5rem var(--neon-text-color);
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+
+    text-shadow:
+      -0.1rem -0.1rem .5rem #fff,
+      0.1rem 0.1rem .5rem #fff,
+      0 0 5rem var(--neon-text-color);
   }
-  
-  20%, 24%, 55% {        
-      text-shadow: none;
-  }     
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
 }
 
 @keyframes launch {
-        0% {
-            transform: translate(0, 0) scale(1);
-        }
-        100% {
-            transform: translate(100vw, -100vh) scale(0.5);
-        }
-    }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(100vw, -100vh) scale(0.5);
+  }
+}
