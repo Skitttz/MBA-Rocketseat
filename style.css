@@ -92,7 +92,7 @@ main {
   animation: flicker 2s infinite backwards;
 }
 
-@media (width <=40rem) {
+@media (max-width: 40rem) {
 
   .title {
     font-size: x-large;
