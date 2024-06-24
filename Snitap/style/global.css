@@ -57,6 +57,7 @@
 
 html,
 button {
+  background-color: var(--background);
   font: 500 1rem/1.5 var(--font-family-mont);
 }
 
