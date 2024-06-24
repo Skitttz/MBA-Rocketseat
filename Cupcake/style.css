@@ -1,105 +1,116 @@
-*{
+* {
   margin: 0;
-  padding:0;
-}
-:root{
-  font-family: "Alice",sans-serif;
-  --background-color: #573824;
-  --surface-color: #f0e8c2;
-  --text-color-primary:#291B1A;
-  --text-color-secondary:#573A37;
-  --text-color-on-bg:#F0E8C2;
+  padding: 0;
 }
 
-body{
+:root {
+  font-family: "Alice", sans-serif;
+  --background-color: #573824;
+  --surface-color: #f0e8c2;
+  --text-color-primary: #291B1A;
+  --text-color-secondary: #573A37;
+  --text-color-on-bg: #F0E8C2;
+}
+
+body {
   background-image: url(./assets/bg-image.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--background-color);
 }
 
-#sobre p + p{
+#sobre p+p {
   margin-top: 4px;
 }
 
-ul{
+ul {
   padding-left: 24px;
 }
 
-li{
+li {
   margin-bottom: 2px;
 }
 
-section + section{
+section+section {
   margin-bottom: 24px;
 }
 
-h1{
+h1 {
   font-size: 40px;
   margin-top: 24px;
   line-height: 140%;
 }
 
-h2{
+h2 {
   font-size: 24px;
 }
 
-h2,p{
+h2,
+p {
   line-height: 150%;
 }
 
-h1,h2{
+h1,
+h2 {
   margin-bottom: 4px;
   color: var(--text-color-primary);
 }
 
-#pagina{
+#pagina {
   box-sizing: border-box;
   width: 800px;
   background-color: var(--surface-color);
   border-radius: 24px;
   margin: 48px auto 28px;
 }
-section{
+
+section {
   margin-left: 48px;
 }
 
-img{
+img {
   border-radius: 16px;
 }
 
-main{
-  padding:24px;
+main {
+  padding: 24px;
 }
 
-footer{
+footer {
   text-align: center;
   padding-bottom: 48px;
   color: var(--text-color-on-bg);
 }
 
-footer img{
+footer img {
   vertical-align: middle;
 }
 
-.back-initial{
-  top: 0;
-  position:fixed;
-  padding-block: 12px;
-  padding-inline: 14px;
-  font-weight: bold;
-  background-color: #500a91;
-  border-radius: 4px;
-  margin-left: 24px;
-  margin-top: 24px;
-  color: #e9e9e9;
-  text-decoration: none;
-  transition: opacity .5s ease;
-  border: none;
+.back-initial {
+  display: none;
 }
 
-.back-initial:hover{
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.20;
+@media(width >=80rem) {
+  .back-initial {
+    display: block;
+    top: 0;
+    position: fixed;
+    padding-block: 12px;
+    padding-inline: 14px;
+    font-weight: bold;
+    background-color: #500a91;
+    border-radius: 4px;
+    margin-left: 24px;
+    margin-top: 24px;
+    color: #e9e9e9;
+    text-decoration: none;
+    transition: opacity .5s ease;
+    border: none;
+  }
+
+  .back-initial:hover {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.20;
+  }
 }
