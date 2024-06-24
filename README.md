@@ -1,4 +1,5 @@
 🇧🇷<div align="center" >
+
 </div>
 
 <p align="center">
@@ -14,22 +15,16 @@
 
 ## Contexto 📝
 
-
 ## Tecnologias 🖥️
-
-
 
 ## Desafios 🎯
 
-
-
-
 ## Como acessar 🚪🚶
 
-
-___
+---
 
 🇺🇸
+
 <div align="center" >
 </div>
 
@@ -46,17 +41,8 @@ ___
 
 ## Context 📝
 
-
-## Technologies 🖥️
-
+## Skills 🖥️
 
 ## Challenges 🎯
 
-
-
-
 ## How to Access 🚪🚶
-
-
-
-
