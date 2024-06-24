@@ -93,3 +93,14 @@ footer {
     }
   }
 }
+
+@media(width <=80rem) {
+  footer {
+    flex-direction: column;
+    gap: 3rem;
+
+    & nav {
+      flex-direction: column;
+    }
+  }
+}
