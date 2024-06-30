@@ -151,12 +151,12 @@ main {
   display: none;
 }
 
-@media(width >=80rem) {
+@media(width >=90rem) {
   .back-initial {
     display: block;
-    top: 0;
+    top: -7px;
     position: fixed;
-    padding-block: 12px;
+    padding-block: 6px;
     padding-inline: 14px;
     font-weight: bold;
     background-color: #500a91;
@@ -167,6 +167,13 @@ main {
     text-decoration: none;
     transition: opacity .5s ease;
     border: none;
+    cursor: pointer;
+
+    &>a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
   }
 
   .back-initial:hover {
