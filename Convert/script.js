@@ -7,25 +7,75 @@ const description = document.getElementById('description');
 const totalValue = document.getElementById('result');
 
 const hasCharactersRegex = /\D+/g;
-const valueUSD = 4.87;
-const valueEUR = 5.32;
-const valueGBP = 6.08;
+
+const defaultValues = {
+  valueUSD: 4.87,
+  valueEUR: 5.32,
+  valueGBP: 6.08,
+};
 
 valueCurrency.addEventListener('input', () => {
   valueCurrency.value = valueCurrency.value.replace(hasCharactersRegex, '');
 });
 
-mainForm.onsubmit = (event) => {
+async function getCurrency(typeCurrency) {
+  try {
+    const response = await fetch(
+      `https://economia.awesomeapi.com.br/json/last/${typeCurrency}`,
+      {
+        method: 'GET',
+      },
+    );
+
+    if (!response.ok) {
+      console.error(
+        'Ops! Aconteceu algo de errado, a moeda sera convertido para um valor padrao. Tente novamente mais tarde',
+      );
+      return null;
+    }
+
+    const data = await response.json();
+    const currencyKey = Object.keys(data)[0];
+    const currencyData = data[currencyKey];
+    const { ask, code } = currencyData;
+    return { ask, code };
+  } catch (error) {
+    console.error(
+      'Ops! Aconteceu algo de errado, a moeda sera convertido para um valor padrao. Tente novamente mais tarde',
+    );
+    return null;
+  }
+}
+
+mainForm.onsubmit = async (event) => {
   event.preventDefault();
+  const currencyValueApi = await getCurrency(typeCurrency.value);
+  const { code: symbolApi = null, ask: currencyValue = null } =
+    currencyValueApi || {};
   switch (typeCurrency.value) {
     case 'USD':
-      convertCurrency(valueCurrency.value, valueUSD, 'US$');
+      convertCurrency(
+        valueCurrency.value,
+        (typeCurrency.value == symbolApi && currencyValue) ||
+          defaultValues.valueUSD,
+        'US$',
+      );
       break;
     case 'EUR':
-      convertCurrency(valueCurrency.value, valueEUR, '€');
+      convertCurrency(
+        valueCurrency.value,
+        (typeCurrency.value == symbolApi && currencyValue) ||
+          defaultValues.valueEUR,
+        '€',
+      );
       break;
     case 'GBP':
-      convertCurrency(valueCurrency.value, valueGBP, '£');
+      convertCurrency(
+        valueCurrency.value,
+        (typeCurrency.value == symbolApi && currencyValue) ||
+          defaultValues.valueGBP,
+        '£',
+      );
       break;
   }
 };
