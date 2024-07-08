@@ -34,17 +34,18 @@ footer {
     }
 
     & span {
-      font-size: .875rem;
+      font-size: 0.875rem;
     }
   }
 
-  @media (width >=80em) {
+  @media (min-width: 80em) {
     .container {
       padding-inline: 0;
       padding-bottom: 2rem;
     }
 
     & .top {
+      display: grid;
       grid-template-columns: auto 1fr;
 
       & nav {

@@ -1,113 +1,110 @@
 #pricing {
-
   --fs-price: 2rem;
+}
 
-  & header {
-    text-align: center;
-  }
+#pricing header {
+  text-align: center;
+}
 
-  & .cards {
-    margin-top: 2rem;
-  }
+#pricing .cards {
+  margin-top: 2rem;
+}
 
-  & h3 {
-    font-size: 1.25rem;
-    margin-top: 0;
-  }
+#pricing h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
 
-  & .card p {
-    margin-top: .25rem;
-  }
+#pricing .card p {
+  margin-top: 0.25rem;
+}
 
-  & zin-pricing {
-    display: block;
-    padding-block: 1.5rem;
-    font: var(--font-bold) var(--fs-price)/1.2 var(--font-family);
-  }
+#pricing zin-pricing {
+  display: block;
+  padding-block: 1.5rem;
+  font: var(--font-bold) var(--fs-price)/1.2 var(--font-family);
+}
 
+#pricing zin-pricing small {
+  font: var(--font-base) 1rem/125% var(--font-family);
+  color: var(--text-color-secondary);
+}
 
-  & zin-pricing small {
-    font: var(--font-base) 1rem/125% var(--font-family);
-    color: var(--text-color-secondary);
-  }
+#pricing .btn {
+  width: 100%;
+}
 
-  & .btn {
-    width: 100%;
-  }
+#pricing .separator {
+  height: 1px;
+  margin-block: 2rem;
+  background: radial-gradient(var(--text-color-secondary), var(--surface-color) 70%);
+}
 
-  & .separator {
-    height: 1px;
-    margin-block: 2rem;
-    background: radial-gradient(var(--text-color-secondary), var(--surface-color) 70%);
-  }
+#pricing li {
+  color: var(--text-color-secondary);
+  background: url(../assets/Check.svg) no-repeat;
+  padding-left: 2rem;
+}
 
-  & li {
-    color: var(--text-color-secondary);
-    background: url(../assets/Check.svg) no-repeat;
-    padding-left: 2rem;
-  }
+#pricing ul+small {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-color-secondary);
+}
 
-  & ul+small {
-    display: block;
-    margin-top: 1.5rem;
-    font-size: 0.875rem;
-    color: var(--text-color-secondary);
-  }
+#pricing .premium {
+  position: relative;
+  padding: 2px;
+}
 
-  & .premium {
-    position: relative;
+#pricing .premium .card {
+  padding-top: 4.25rem;
+}
 
-    & .card {
-      padding-top: 4.25rem;
+#pricing .premium .card>span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  font: 600 var(--size-sm) var(--font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--background-color);
+}
 
-      &>span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: .75rem 2rem;
-        background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+#pricing .premium::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+  inset: 0;
+  border-radius: 1.5rem;
+  z-index: -1;
+}
 
-        border-top-left-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-        font: 600 var(--size-sm) var(--font-family);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--background-color);
-      }
-    }
-
-    padding: 2px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
-      inset: 0;
-      border-radius: 1.5rem;
-      z-index: -1;
-
-    }
-  }
-
-  @media (width >=80em) {
+@media (min-width: 80em) {
+  #pricing {
     --fs-price: 2.5rem;
+  }
 
-    & header {
-      max-width: 50rem;
-      margin-inline: auto;
-    }
+  #pricing header {
+    max-width: 50rem;
+    margin-inline: auto;
+  }
 
-    & .premium .card {
-      padding-bottom: 6rem;
-    }
+  #pricing .premium .card {
+    padding-bottom: 6rem;
+  }
 
-    & .card:nth-child(3) .separator {
-      margin-bottom: 1.5rem;
-    }
+  #pricing .cards .card:nth-child(3) .separator {
+    margin-bottom: 1.5rem;
+  }
 
-    .btn-sm {
-      padding: .75rem 1.5rem;
-      font-size: var(--size-base);
-    }
+  #pricing .btn-sm {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--size-base);
   }
 }

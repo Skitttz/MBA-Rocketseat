@@ -1,5 +1,5 @@
 .btn {
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
   --btn-bg-color: var(--text-color-primary);
   --btn-color: var(--background-color);
   border: 0;
@@ -8,11 +8,9 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   font: var(--font-medium) var(--size-base)/1.5rem var(--font-family);
   cursor: pointer;
-
   background: var(--btn-bg-color);
   color: var(--btn-color);
 }
@@ -26,12 +24,12 @@
 }
 
 .btn-sm {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: var(--size-sm);
 }
 
 .btn-md {
-  padding: .75rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   font-size: var(--size-base);
 }
 
@@ -42,30 +40,28 @@
 
 .btn[aria-label] {
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    border-radius: inherit;
-    inset: 1px;
-    background-color: var(--background-color);
-  }
-
-  &::after {
-    z-index: 1000;
-    content: attr(aria-label);
-    background: var(--btn-bg-color);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
 }
 
+.btn[aria-label]::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  inset: 1px;
+  background-color: var(--background-color);
+}
 
-@media (width >=80em) {
+.btn[aria-label]::after {
+  z-index: 1000;
+  content: attr(aria-label);
+  background: var(--btn-bg-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
+@media (min-width: 80em) {
   .btn-sm {
-    padding: .75rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     font-size: var(--size-base);
   }
 

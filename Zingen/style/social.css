@@ -1,10 +1,9 @@
 a.social {
-  --bg-img: "";
+  --bg-image: "";
   background-image: var(--bg-image);
   width: 1.5rem;
   height: 1.5rem;
   display: block;
-
   -webkit-background-clip: initial;
   background-clip: initial;
 

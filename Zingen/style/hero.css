@@ -1,46 +1,46 @@
 #hero {
   text-align: center;
-
-  & img[src*="music"] {
-    width: 12.875rem;
-  }
-
-  & h1 {
-    margin-top: 1rem;
-  }
-
-  & p {
-    font: var(--font-medium) var(--size-lg)/1.4 var(--font-family);
-    color: var(--text-color-secondary);
-    margin-top: .5rem;
-  }
-
-  & .buttons {
-    justify-content: center;
-    margin-top: 2rem;
-  }
 }
 
-@media (width >=80em) {
+#hero img[src*="music"] {
+  width: 12.875rem;
+}
+
+#hero h1 {
+  margin-top: 1rem;
+}
+
+#hero p {
+  font: var(--font-medium) var(--size-lg)/1.4 var(--font-family);
+  color: var(--text-color-secondary);
+  margin-top: .5rem;
+}
+
+#hero .buttons {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (min-width: 80em) {
   #hero {
     background: url(../assets/bg-hero-desktop.svg) no-repeat bottom center/contain;
     padding-bottom: 15rem;
+  }
 
-    & img[src*="music"] {
-      width: 25.75rem;
-    }
+  #hero img[src*="music"] {
+    width: 25.75rem;
+  }
 
-    & h1 {
-      margin-top: 1.5rem;
-    }
+  #hero h1 {
+    margin-top: 1.5rem;
+  }
 
-    & p {
-      margin-top: 1rem;
-      font-size: 2.5rem;
-    }
+  #hero p {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
 
-    & .buttons {
-      margin-top: 3rem;
-    }
+  #hero .buttons {
+    margin-top: 3rem;
   }
 }
