@@ -35,7 +35,7 @@
 <h2 id="how-to-access">🔗 How to Access</h2>
 
 <p>
-  The project is hosted on GitHub Pages and can be accessed <a href="#">---</a>.
+  The project is hosted on GitHub Pages and can be accessed <a href="https://skitttz.github.io/MBA-Rocketseat/">here</a>.
 </p>
 
 <h2 id="license">📄 License</h2>
