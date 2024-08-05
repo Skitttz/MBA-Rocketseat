@@ -96,6 +96,8 @@ body {
     text-decoration: none !important;
     align-items: center;
     gap: 0.5rem;
+    font-weight: bold;
+    font-size: 0.8rem;
   }
 
   .back-initial a img {
