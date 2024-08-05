@@ -27,13 +27,11 @@ form.addEventListener('submit', async (event) => {
 
     const when = dayjs(inputDate.value).add(hour, 'hour');
     const id = new Date().getTime().toString();
-    console.log({ id, name, when });
     await scheduleNew({
       id,
       name,
       when,
     });
-
     await schedulesDay();
     inputClientName.value = '';
   } catch (error) {
