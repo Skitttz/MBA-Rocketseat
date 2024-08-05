@@ -1,13 +1,24 @@
 import { apiConfig } from './api-config.js';
+import {
+  getLocalStorageData,
+  setLocalStorageData,
+} from './localStorage-config.js';
 
 export async function scheduleCancel({ id }) {
   try {
-    await fetch(`${apiConfig.baseURL}/schedules/${id}`, {
+    const response = await fetch(`${apiConfig.baseURL}/schedules/${id}`, {
       method: 'DELETE',
     });
-    alert('Agendamento cancelado com sucesso!');
+    if (!response.ok) {
+      throw new Error('API request failed');
+    }
+    alert('[API] Agendamento cancelado com sucesso!');
   } catch (error) {
     console.error(error);
-    alert('Nao foi possivel cancelar o agendamento');
+
+    let data = getLocalStorageData();
+    data = data.filter((schedule) => schedule.id !== id);
+    setLocalStorageData(data);
+    alert('Agendamento cancelado com sucesso!');
   }
 }
