@@ -68,7 +68,6 @@ function expenseAdd(expense) {
 
     expenseItem.classList.add('expense');
     expenseIcon.setAttribute('src', `./img/${expense.category_id}.svg`);
-    console.log(expense.category_id);
     expenseIcon.setAttribute('alt', `${expense.category_name}`);
 
     //Add icon to item
