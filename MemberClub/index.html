@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   <title>Member Club</title>
 </head>
 
@@ -17,7 +18,8 @@
       <div class="modal-div">
         <div class="header-nav-modal"><button class="btn-close-modal">X</button></div>
         <img src="./src/assets/favicon.svg" alt="">
-        <p class="message-modal"></p>
+        <p class="message-status-modal"></p>
+        <span class="message-modal"></span>
       </div>
     </div>
   </div>
@@ -33,7 +35,7 @@
       <section class="side-container flex flex-col gap-4 b-gray-300 b-radius-4">
         <div class="side-user bg-gray-100 b-gray-300 b-radius-4 flex items-center">
           <div class="container-image-user">
-            <img class="user-avatar" src="./src/assets/avatar-default.png" alt="Foto Perfil Usuario"">
+            <img class="user-avatar " src="./src/assets/avatar-default.png" alt="Foto Perfil Usuario"">
           </div>
           <div>
             <h4 class=" user-name text-lg">Nome</h4>
@@ -46,7 +48,7 @@
           <h4>HISTÓRICO</h4>
           <p class="text-sm"><strong class="number-cut">0</strong> cortes</p>
         </div>
-        <ul class="history-list flex flex-col gap-3">
+        <ul class="history-list flex flex-col gap-3 ">
 
         </ul>
       </section>
@@ -57,7 +59,7 @@
             <span class="card-description text-sm">Ao fazer cortes de cabelo, o décimo sai de graça!</span>
           </div>
           <div>
-            <p class="user-id text-base">ID: <span>XXX-XXX-XXX-XXX</<span>
+            <p class="user-id text-base ">ID: <span>XXX-XXX-XXX-XXX</<span>
             </p>
           </div>
         </div>
