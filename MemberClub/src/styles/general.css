@@ -34,3 +34,9 @@
 .container-progress {
   grid-area: progress;
 }
+
+
+.animation-source {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}

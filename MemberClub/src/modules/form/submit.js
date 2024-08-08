@@ -1,6 +1,6 @@
 import { clientByID } from '../../services/client-fetch.js';
 import { formatInputValue } from '../../utils/formatInput.js';
-import { showStatsUser } from '../clients/show.js';
+import { showConfette, showStatsUser } from '../clients/show.js';
 import { showModal } from '../modal.js';
 
 const inputSearchId = document.querySelector('.field-id');
@@ -46,6 +46,10 @@ form.addEventListener('submit', async (event) => {
       appointmentHistory,
       loyaltyCard,
     );
+    if (loyaltyCard.totalCuts === 10) {
+      showModal(event, 'sucess');
+      showConfette();
+    }
   } catch (error) {
     console.error('Erro ao buscar ou processar dados do usuário:', error);
     showModal(event, 'invalidID');

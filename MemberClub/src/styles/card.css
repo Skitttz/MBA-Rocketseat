@@ -53,10 +53,11 @@
 }
 
 
-.card-list-container:last-child .card-item img.reward {
+.card-list-container:last-child .card-item.bg-reward img {
   width: 80px !important;
   height: 80px !important;
 }
+
 
 @media(max-width: 764px) {
   .card-header {
@@ -87,5 +88,10 @@
     font-size: 12px;
     border-radius: 15px;
     white-space: nowrap;
+  }
+
+  .card-list-container:last-child .card-item.bg-reward img {
+    width: 60px !important;
+    height: 60px !important;
   }
 }

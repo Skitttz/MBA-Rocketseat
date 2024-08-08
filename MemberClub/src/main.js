@@ -1,3 +1,3 @@
 import '../src/styles/index.css';
-import './libs/dayjs.js';
+import './services/storage.js';
 import './modules/form/submit.js';

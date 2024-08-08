@@ -61,3 +61,35 @@
 .bold {
   font-weight: bold;
 }
+
+.bg-reward {
+  background: linear-gradient(90deg,
+      #2DAA6E, #2DAAAA, #856CCF, #D658B3, #2DAA6E,
+      #2DAAAA, #856CCF, #D658B3, #2DAA6E);
+  background-size: 800% 100%;
+  animation: moveGradient 2s ease-in-out infinite alternate;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: -400% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes opacityEase {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

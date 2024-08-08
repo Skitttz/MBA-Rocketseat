@@ -47,3 +47,26 @@ export async function showStatsUser(
 
   putPinCheckCard(userCardList, totalCuts);
 }
+
+export function showConfette() {
+  const confettiContainer = document.createElement('div');
+  confettiContainer.style.position = 'fixed';
+  confettiContainer.style.top = '0';
+  confettiContainer.style.left = '0';
+  confettiContainer.style.width = '100%';
+  confettiContainer.style.height = '100%';
+  confettiContainer.style.pointerEvents = 'none';
+  confettiContainer.style.zIndex = '100';
+
+  document.body.appendChild(confettiContainer);
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 },
+    zIndex: 100,
+    appendTo: confettiContainer,
+  });
+  setTimeout(() => {
+    confettiContainer.remove();
+  }, 5000);
+}

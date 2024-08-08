@@ -46,7 +46,7 @@ input:-webkit-autofill:focus {
 .modal {
   display: none;
   position: fixed;
-  z-index: 30000;
+  z-index: 20;
   left: 0;
   top: 0;
   width: 100%;
@@ -95,6 +95,14 @@ input:-webkit-autofill:focus {
 }
 
 
+.message-status-modal {
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+.message-modal {
+  color: var(--base-gray-500);
+}
 
 @keyframes fadeIn {
   from {

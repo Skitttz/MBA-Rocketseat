@@ -1,14 +1,24 @@
 const modal = document.querySelector('.modal');
 const modalView = document.querySelector('.modal-content');
 const messageModal = document.querySelector('.message-modal');
+const statusMessageModal = document.querySelector('.message-status-modal');
 const username = document.querySelector('.user-name');
 const btnClose = document.querySelector('.btn-close-modal');
 
 const activeClass = 'ativo';
-const message = {
-  reward: `Parabéns! Seu próximo corte é gratuito!`,
-  invalidValue: 'Por favor, insira um ID com 12 dígitos',
-  invalidID: 'Não foi encontrado o ID do usuário',
+const ObjectMessage = {
+  reward: {
+    title: '🎉🎉🎉',
+    message: 'Parabéns! Seu próximo corte é gratuito!',
+  },
+  invalidValue: {
+    title: 'Campo Invalido',
+    message: 'O ID deve conter 12 dígitos.',
+  },
+  invalidID: {
+    title: 'Usuário não encontrado',
+    message: 'Verifique se o ID foi digitado corretamente e tente novamente.',
+  },
 };
 
 export function showModal(event, status) {
@@ -40,13 +50,16 @@ function handleClickOutside(event) {
 function generateMessage(status) {
   switch (status) {
     case 'sucess':
-      messageModal.textContent = message.reward;
+      statusMessageModal.textContent = ObjectMessage.reward.title;
+      messageModal.textContent = ObjectMessage.reward.message;
       break;
     case 'invalidIDLength':
-      messageModal.textContent = message.invalidValue;
+      statusMessageModal.textContent = ObjectMessage.invalidValue.title;
+      messageModal.textContent = ObjectMessage.invalidValue.message;
       break;
     case 'invalidID':
-      messageModal.textContent = message.invalidID;
+      statusMessageModal.textContent = ObjectMessage.invalidID.title;
+      messageModal.textContent = ObjectMessage.invalidID.message;
       break;
     default:
       break;

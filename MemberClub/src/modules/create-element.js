@@ -26,8 +26,24 @@ export function createItemHistory(date, hour, parentElement) {
   parentElement.appendChild(listItem);
 }
 
+function changeImageSrc(imgElement, newSrc) {
+  imgElement.style.opacity = 0;
+  setTimeout(() => {
+    imgElement.setAttribute('src', newSrc);
+    imgElement.style.opacity = 1;
+  }, 200);
+}
+
+function createPinImage(src) {
+  const img = document.createElement('img');
+  img.classList.add('animation-source');
+  changeImageSrc(img, src);
+  return img;
+}
+
 export function putPinCheckCard(parentElement, numberCuts) {
   const giftProgress = document.querySelector('.bg-gift-illustrator');
+  const classReward = 'bg-reward';
   const imgSrc = {
     checked: './src/assets/pinCheck.svg',
     reward: './src/assets/pinGiftBottom.svg',
@@ -43,28 +59,22 @@ export function putPinCheckCard(parentElement, numberCuts) {
     const existingImage = lastCardItem.querySelector('img');
 
     if (!existingImage) {
-      const pinUnchecked = document.createElement('img');
-      pinUnchecked.setAttribute('src', imgSrc.unchecked);
-      lastCardItem.appendChild(pinUnchecked);
+      lastCardItem.appendChild(createPinImage(imgSrc.unchecked));
     }
+    [lastCardItem, giftProgress].forEach((element) =>
+      element.classList.remove(classReward),
+    );
   }
   for (let index = 0; index < numberCuts; index++) {
     const element = cardArray[index];
     if (element) {
-      const imgPinCheck = document.createElement('img');
-      imgPinCheck.setAttribute('src', imgSrc.checked);
+      const imgPinCheck = createPinImage(imgSrc.checked);
       if (index === 9) {
         cardArray[index].innerHTML = '';
-        imgPinCheck.setAttribute('src', imgSrc.reward);
-        imgPinCheck.classList.add('bg-reward');
-        giftProgress.classList.add('bg-reward');
-      } else if (
-        numberCuts > 10 &&
-        cardArray[index].classList.contains('bg-reward')
-      ) {
-        cardArray[index].classList.remove('bg-reward');
+        changeImageSrc(imgPinCheck, imgSrc.reward);
+        cardArray[index].classList.add(classReward);
+        giftProgress.classList.add(classReward);
       }
-
       element.appendChild(imgPinCheck);
     }
   }

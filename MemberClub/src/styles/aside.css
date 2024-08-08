@@ -11,6 +11,7 @@
   padding: 24px;
   overflow: hidden;
   max-height: 360px;
+  transition: opacity 1s ease-in-out;
 }
 
 .side-user {
