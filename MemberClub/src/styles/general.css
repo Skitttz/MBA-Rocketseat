@@ -1,0 +1,36 @@
+.main-container {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 57rem;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "side-container card-list"
+    "side-history card-list"
+    "side-history progress"
+    "side-history progress";
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 16px;
+  column-gap: 24px;
+}
+
+.side-container {
+  grid-area: side-container;
+}
+
+.side-history {
+  grid-area: side-history;
+}
+
+.user-card-list {
+  grid-area: card-list;
+}
+
+.container-progress {
+  grid-area: progress;
+}

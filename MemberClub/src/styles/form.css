@@ -1,0 +1,48 @@
+.input-container {
+  position: relative;
+}
+
+.field-id {
+  padding-right: 56px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.input-container .btn-search {
+  position: absolute;
+  opacity: 0.70;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+  background-image: url(../../src/assets/button.svg);
+  box-shadow: rgb(200, 208, 231) 1.2px 1.2px 2px 0px inset, #dfdcdf -1.2px -1.2px 2px 0px inset;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.input-container:hover .btn-search,
+.input-container:valid .btn-search {
+  opacity: 1;
+}
+
+@media(max-width: 764px) {
+  .input-container {
+    width: 100%;
+  }
+
+  .input-container .field-id {
+    width: 100%;
+    max-width: 100%;
+  }
+}

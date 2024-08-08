@@ -1,0 +1,36 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 64px;
+  gap: 32px;
+  width: 100%;
+}
+
+.header-container .field-id {
+  position: relative;
+  width: 400px;
+  height: 56px;
+  max-width: 400px;
+  font-size: var(--text-base);
+  color: var(--base-gray-700);
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  color: inherit;
+  background-color: var(--base-gray-300);
+  border: solid 1.5px var(--base-gray-400);
+  transition: border 0.2s ease-in-out;
+}
+
+.field-id:hover,
+.field-id:focus {
+  border: solid 1.5px var(--main-pink);
+}
+
+.logo {
+  width: 116px;
+  height: 56px;
+}

@@ -1,0 +1,43 @@
+/* Color styles */
+:root {
+  --main-pink: rgba(214, 88, 179, 1);
+  --main-green: rgba(69, 180, 66, 1);
+  --gradient-pink-green: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33.33%, #856CCF 66.67%, #D658B3 100%);
+  --base-white: rgba(255, 255, 255, 1);
+  --base-gray-100: rgba(244, 241, 242, 1);
+  --base-gray-200: rgba(233, 231, 233, 1);
+  --base-gray-300: rgba(223, 220, 223, 1);
+  --base-gray-400: rgba(206, 202, 205, 1);
+  --base-gray-500: rgba(117, 108, 113, 1);
+  --base-gray-600: rgba(74, 68, 72, 1);
+  --base-gray-700: rgba(51, 43, 49, 1);
+
+  /* Text-size styles */
+  --text-lg: 1.125rem;
+  --text-base: 1rem;
+  --text-sm: 0.75rem;
+  --text-xs: 0.5rem;
+  --heading-subtitle-md: 0.58rem;
+  --heading-subtitle-sm: 0.5rem;
+  --body-text-md: 0.67rem;
+  --body-text-sm: 0.58rem;
+  --body-text-xs: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oxygen", sans-serif;
+  line-height: 140%;
+  color: var(--base-gray-600);
+  width: 100%;
+  height: 100vh;
+  background-color: var(--base-gray-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

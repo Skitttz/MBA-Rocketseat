@@ -1,0 +1,40 @@
+.history-list {
+  scrollbar-width: 6px;
+  scrollbar-color: var(--base-gray-300) var(--base-gray-100);
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.history-list::-webkit-scrollbar,
+.history-list::-webkit-scrollbar-thumb,
+.history-list::-webkit-scrollbar-track {
+  border-radius: 999px;
+}
+
+.history-list::-webkit-scrollbar {
+  width: 6px;
+  height: 72px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background-color: var(--base-gray-300);
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: var(--base-gray-100);
+}
+
+.history-list::-webkit-scrollbar-button {
+  display: none;
+}
+
+.history-list::-moz-scrollbar-button:decrement,
+.history-list::-moz-scrollbar-button:increment,
+.history-list::-webkit-scrollbar-button:decrement,
+.history-list::-webkit-scrollbar-button:increment {
+  width: 0px;
+}
+
+.history-list::-webkit-scrollbar-button {
+  height: 0;
+  width: 0
+}

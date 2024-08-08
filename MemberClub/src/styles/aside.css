@@ -1,0 +1,136 @@
+.side-user,
+.side-history {
+  max-width: 320px;
+}
+
+.side-user {
+  padding: 16px;
+}
+
+.side-history {
+  padding: 24px;
+  overflow: hidden;
+  max-height: 360px;
+}
+
+.side-user {
+  max-width: 20rem;
+  display: flex;
+  gap: 16px;
+}
+
+.side-user .user-name {
+  line-height: 140%;
+  font-weight: 700;
+  color: var(--base-gray-600);
+}
+
+.container-image-user {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.container-image-user img {
+  border: solid 3px #f4f1f2;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container-image-user::before,
+.container-image-user::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.container-image-user::before {
+  background-image: conic-gradient(from 0deg,
+      #2DAA6E 0%,
+      #2DAAAA 33.33%,
+      #856CCF 66.67%,
+      #D658B3 100%);
+  filter: blur(6px);
+}
+
+.container-image-user::after {
+  background-image: conic-gradient(from 0deg,
+      #2DAA6E 0%,
+      #2DAAAA 33.33%,
+      #856CCF 66.67%,
+      #D658B3 100%,
+      transparent 120deg);
+  top: -40%;
+  left: -30%;
+  width: 150%;
+  height: 150%;
+  animation: rotate 4s linear infinite;
+  filter: blur(6px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.side-history-header {
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.side-history-header {
+  border-bottom: 1px solid var(--base-gray-300);
+  margin-bottom: 12px;
+}
+
+.side-history h4,
+.side-history .side-history-header span {
+  color: var(--base-gray-500);
+}
+
+
+.side-history h4 {
+  font-weight: 700;
+}
+
+
+.date-cut {
+  color: var(--base-gray-600);
+  font-size: var(--text-sm);
+}
+
+.hour-cut {
+  color: var(--base-gray-500);
+  font-size: var(--text-sm);
+}
+
+.history-list {
+  overflow-y: auto;
+  max-height: 300px;
+  padding-right: 12px;
+}
+
+.history-item img {
+  width: 32px;
+  height: 32px;
+}

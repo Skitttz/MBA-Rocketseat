@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Member Club</title>
+</head>
+
+<body>
+  <div class="modal">
+    <div class="fadeModal modal-content">
+      <div class="modal-div">
+        <div class="header-nav-modal"><button class="btn-close-modal">X</button></div>
+        <img src="./src/assets/favicon.svg" alt="">
+        <p class="message-modal"></p>
+      </div>
+    </div>
+  </div>
+  <main class="main-container">
+    <header class="container header-container">
+      <img class="logo" src="./src/assets/logo.svg" alt="Logo Member">
+      <form class="input-container">
+        <input class="field-id" type="text" name="field-id" id="" placeholder="ID do cartão (ex: 000-111-222-333)" aria-label="Campo ID do Usuario" required>
+        <button class="btn-search" type="submit" />
+      </form>
+    </header>
+    <div class="container grid grid-area">
+      <section class="side-container flex flex-col gap-4 b-gray-300 b-radius-4">
+        <div class="side-user bg-gray-100 b-gray-300 b-radius-4 flex items-center">
+          <div class="container-image-user">
+            <img class="user-avatar" src="./src/assets/avatar-default.png" alt="Foto Perfil Usuario"">
+          </div>
+          <div>
+            <h4 class=" user-name text-lg">Nome</h4>
+            <p class="user-created text-sm">Cliente desde <span class="date-user-created">__/__/____</span></p>
+          </div>
+        </div>
+      </section>
+      <section class="side-history bg-gray-100 b-gray-300 b-radius-4 ">
+        <div class="flex content-between side-history-header">
+          <h4>HISTÓRICO</h4>
+          <p class="text-sm"><strong class="number-cut">0</strong> cortes</p>
+        </div>
+        <ul class="history-list flex flex-col gap-3">
+
+        </ul>
+      </section>
+      <section class="user-card-list flex flex-col gap-8 bg-gray-100 b-gray-300 b-radius-4 card-main">
+        <div class="card-header flex content-between">
+          <div class="flex flex-col">
+            <h5 class="card-title text-sm">CARTÃO FIDELIDADE</h5>
+            <span class="card-description text-sm">Ao fazer cortes de cabelo, o décimo sai de graça!</span>
+          </div>
+          <div>
+            <p class="user-id text-base">ID: <span>XXX-XXX-XXX-XXX</<span>
+            </p>
+          </div>
+        </div>
+        <div class="cards">
+          <ul class="card-list-container">
+            <li class="card-item">
+            </li>
+            <li class="card-item">
+            </li>
+            <li class="card-item">
+            </li>
+            <li class="card-item">
+            </li>
+            <li class="card-item">
+            </li>
+            <li class="card-item">
+            </li>
+            <li class="card-item">
+            </li>
+            <li class="card-item">
+            </li>
+            <li class="card-item">
+            </li>
+            <li class="card-item">
+              <img src="./src/assets/pinGiftGray.svg" alt="">
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container-progress flex items-center gap-8 bg-gray-100 b-gray-300 b-radius-4">
+        <div class="flex flex-col user-progress">
+          <p><strong class="user-cuts-remaining">0</strong> cortes restantes</p>
+          <div class="display-progress flex">
+            <div class="linear-progress">
+              <div class="actual-progress"></div>
+            </div>
+            <span><strong class="number-cut">0</strong> de 10</span>
+          </div>
+        </div>
+        <div class="bg-gift-illustrator flex"><img src="../src/assets/pinGiftBottom.svg" alt=""></div>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

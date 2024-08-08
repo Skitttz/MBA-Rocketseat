@@ -1,0 +1,125 @@
+.container-progress {
+  max-height: 116px;
+}
+
+.user-progress {
+  padding: 32px 27px;
+}
+
+.user-progress,
+.display-progress {
+  gap: 12px;
+}
+
+.display-progress {
+  align-items: center;
+}
+
+.display-progress span {
+  font-size: var(--text-sm);
+  color: var(--base-gray-500);
+  white-space: nowrap;
+}
+
+.linear-progress {
+  position: relative;
+  background-color: var(--base-gray-300);
+  width: 350px;
+  height: 8px;
+}
+
+.actual-progress {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-pink-green);
+  background-size: 200% 200%;
+  animation: fillProgressBar 1s ease-in-out forwards, moveGradient 4s linear forwards;
+  position: absolute;
+  transition: width 0.5s ease-in-out;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  z-index: 10;
+  transform-origin: left;
+}
+
+.actual-progress,
+.linear-progress {
+  height: 8px;
+  border-radius: 9999px;
+}
+
+.bg-gift-illustrator {
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 72px;
+  background-color: var(--base-gray-200);
+}
+
+.bg-gift-illustrator img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+}
+
+.bg-reward {
+  background: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33.33%, #856CCF 66.67%, #D658B3 100%) !important;
+}
+
+
+@keyframes fillProgressBar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@media(max-width: 764px) {
+
+  .user-progress strong {
+    font-size: 18px;
+  }
+
+  .user-progress {
+    padding: 0;
+  }
+
+  .container-progress {
+    display: grid !important;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+    padding: 20px 16px;
+    align-items: center;
+
+  }
+
+
+  .linear-progress {
+    width: 100%;
+  }
+
+  .display-progress {
+    gap: 12px;
+  }
+
+  .display-progress span {
+    width: fit-content;
+  }
+
+}

@@ -1,0 +1,35 @@
+@media(max-width: 764px) {
+
+  .logo {
+    width: 99px;
+    height: 48px;
+  }
+
+
+  .container {
+    padding-inline: 12px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+      "side-container"
+      "card-list"
+      "progress"
+      "side-history";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+    padding-bottom: 15px;
+  }
+
+  .header-container {
+    padding-top: 32px;
+    padding-bottom: 20px;
+  }
+
+  .side-container,
+  .side-user,
+  .side-history {
+    max-width: 100%;
+  }
+}
