@@ -2,8 +2,9 @@
   /* Set neon color */
   --neon-text-color: #f9f9f9;
   --neon-border-color: #2661bf;
-  --gradient-begin: #FAF8F9;
-  --gradient-end: #F0EFF0;
+  --gradient-begin: #A27BCE;
+  --gradient-end: #5D3A8C;
+
 }
 
 * {
@@ -27,8 +28,6 @@ html {
 }
 
 body {
-  overflow: hidden;
-  min-height: 100%;
   background: linear-gradient(90deg, #500a91 0%, #2f0d4f 100%);
 }
 
@@ -47,6 +46,30 @@ main {
   gap: 10px;
 }
 
+.container-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  background-color: #F0EFF0;
+}
+
+.container-item .description-item {
+  color: #2F2F2F;
+  word-break: keep-all;
+  text-align: start;
+  user-select: none;
+  background-color: #ECECEC;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 0px 0px 4px;
+}
+
+.container-item .link {
+  align-self: center;
+  user-select: none;
+}
+
 
 .title-area {
   display: flex;
@@ -56,7 +79,7 @@ main {
 }
 
 .title {
-  font-size: xx-large;
+  font-size: 3rem;
   color: #f9f9f9;
   font-weight: 500;
   user-select: none;
@@ -80,25 +103,56 @@ main {
   padding: 24px;
   border-radius: 6px;
   min-width: 400px;
+  max-width: 600px;
   display: grid;
   align-items: center;
-  gap: 15px;
-  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 20px;
+  grid-template-columns: 1fr;
   border: 0.1px solid #fff;
   background-color: var(--neon-border-color);
+  margin-bottom: 1rem;
 }
 
 .link-list:hover {
   animation: flicker 2s infinite backwards;
 }
 
+.container-footer {
+  padding-block: 1.25rem;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  z-index: 50000;
+}
+
+.container-footer p {
+  color: #f9f9f9;
+  font-size: 1rem;
+}
+
+.container-footer .author {
+  font-weight: 500;
+  padding-inline: 8px;
+  padding-block: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  transition: opacity ease-in-out .2s;
+  border-radius: 4px;
+}
+
 @media (max-width: 40rem) {
+  .container-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
   .title {
     font-size: x-large;
   }
 
   .link-list {
+    max-width: auto;
     grid-template-columns: 1fr;
     min-width: 220px;
   }
@@ -110,13 +164,14 @@ main {
 }
 
 .link {
+  min-width: 160px;
   padding-inline: 4px;
   padding-block: 8px;
   border: #182848 solid 1px;
-  color: #0d2969;
+  color: #f5f5f5;
   text-align: center;
   border-radius: 3px;
-  transition: opacity ease .5s;
+  transition: opacity ease-in-out .5s;
   opacity: 100;
   border: none;
   background: linear-gradient(33deg, var(--gradient-begin), var(--gradient-end));
@@ -132,6 +187,7 @@ main {
   }
 }
 
+.author:hover,
 .link:hover {
   opacity: 0.8;
 }
