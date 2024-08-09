@@ -8,6 +8,7 @@
 <p align="center">
   <a href="#overview">Overview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#module-structure">Module Structure</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#mocked-data">Mocked Data</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#how-to-access">How to Access</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#license">License</a>
 </p>
@@ -31,6 +32,53 @@
   <li>Comprehensive exploration of the JavaScript ecosystem and its practical applications</li>
   <li>Development of skills to create applications and solve real-world challenges</li>
 </ul>
+
+<h2 id="mocked-data">🔢 Mocked Data</h2>
+
+<p>
+  The <b>Member Club</b> project, these fictional IDs for testing purposes:
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Total Cuts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>124-537-835-230</td>
+      <td>Natália Miranda</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>207-245-699-104</td>
+      <td>Capitão Nascimento</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>523-114-876-908</td>
+      <td>Sansão</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>444-999-333-289</td>
+      <td>Skittz</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>888-222-555-111</td>
+      <td>Sérgio Ricardo</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+
+  > [!NOTE]  
+  >  </strong> Only to reach 10 cuts is eligible for a free haircut
+
 
 <h2 id="how-to-access">🔗 How to Access</h2>
 
