@@ -11,7 +11,11 @@
   padding: 24px;
   overflow: hidden;
   max-height: 360px;
-  transition: opacity 1s ease-in-out;
+}
+
+.history-list {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .side-user {
@@ -35,6 +39,7 @@
   height: 56px;
   border-radius: 13px;
   overflow: hidden;
+  background-color: #f4f1f2;
 }
 
 .container-image-user img {
