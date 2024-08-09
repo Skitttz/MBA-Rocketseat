@@ -1,15 +1,20 @@
 import { clearData } from '../../utils/clearData.js';
+import {
+  userAvatar,
+  userAvatarContainer,
+  userCardList,
+  userCreated,
+  userHistory,
+  userID,
+  username,
+} from '../constants/client-dom.js';
+import {
+  numbercut,
+  progressBar,
+  userCutsRemaning,
+} from '../constants/progress-dom.js';
 import { createItemHistory, putPinCheckCard } from '../create-element.js';
-
-const username = document.querySelector('.user-name');
-const userID = document.querySelector('.user-id span');
-const userCreated = document.querySelector('.date-user-created');
-const userAvatar = document.querySelector('.user-avatar');
-const userHistory = document.querySelector('.history-list');
-const userCardList = document.querySelectorAll('.card-item');
-const numbercut = document.querySelectorAll('.number-cut');
-const userCutsRemaning = document.querySelector('.user-cuts-remaining');
-const progressBar = document.querySelector('.actual-progress');
+import { fadeAvatar, fadeDivContent } from '../transition/fade.js';
 
 export async function showStatsUser(
   id,
@@ -20,6 +25,7 @@ export async function showStatsUser(
   loyaltyCard,
 ) {
   const { totalCuts, cutsNeeded, cutsRemaining } = loyaltyCard;
+
   clearData(
     username,
     userID,
@@ -31,7 +37,7 @@ export async function showStatsUser(
     userCutsRemaning,
     progressBar,
   );
-  userAvatar.setAttribute('src', avatar);
+  fadeAvatar(userAvatar, avatar, userAvatarContainer);
   progressBar.style.width = `${totalCuts}0%`;
   username.textContent = name;
   userID.textContent = id;
@@ -44,6 +50,7 @@ export async function showStatsUser(
   appointmentHistory.map((item) => {
     createItemHistory(item.date, item.time, userHistory);
   });
+  fadeDivContent(userHistory);
 
   putPinCheckCard(userCardList, totalCuts);
 }

@@ -1,9 +1,11 @@
-export function createItemHistory(date, hour, parentElement) {
-  const listItem = document.createElement('li');
-  listItem.classList.add('history-item', 'flex', 'content-between');
+import { fadeImageSrc } from './transition/fade.js';
 
-  const divFlexCol = document.createElement('div');
-  divFlexCol.classList.add('flex', 'flex-col');
+export function createItemHistory(date, hour, parentElement) {
+  const historyItem = document.createElement('li');
+  historyItem.classList.add('history-item', 'flex', 'content-between');
+
+  const historyListContainer = document.createElement('div');
+  historyListContainer.classList.add('flex', 'flex-col');
 
   const pDate = document.createElement('p');
   pDate.classList.add('date-cut', 'bold');
@@ -13,31 +15,23 @@ export function createItemHistory(date, hour, parentElement) {
   spanHour.classList.add('hour-cut');
   spanHour.textContent = hour;
 
-  divFlexCol.appendChild(pDate);
-  divFlexCol.appendChild(spanHour);
+  historyListContainer.appendChild(pDate);
+  historyListContainer.appendChild(spanHour);
 
   const img = document.createElement('img');
   img.src = './src/assets/pinCheckSidebar.svg';
-  img.alt = '';
+  img.alt = 'Icon Pin Check';
 
-  listItem.appendChild(divFlexCol);
-  listItem.appendChild(img);
+  historyItem.appendChild(historyListContainer);
+  historyItem.appendChild(img);
 
-  parentElement.appendChild(listItem);
-}
-
-function changeImageSrc(imgElement, newSrc) {
-  imgElement.style.opacity = 0;
-  setTimeout(() => {
-    imgElement.setAttribute('src', newSrc);
-    imgElement.style.opacity = 1;
-  }, 200);
+  parentElement.appendChild(historyItem);
 }
 
 function createPinImage(src) {
   const img = document.createElement('img');
   img.classList.add('animation-source');
-  changeImageSrc(img, src);
+  fadeImageSrc(img, src);
   return img;
 }
 
@@ -71,7 +65,7 @@ export function putPinCheckCard(parentElement, numberCuts) {
       const imgPinCheck = createPinImage(imgSrc.checked);
       if (index === 9) {
         cardArray[index].innerHTML = '';
-        changeImageSrc(imgPinCheck, imgSrc.reward);
+        fadeImageSrc(imgPinCheck, imgSrc.reward);
         cardArray[index].classList.add(classReward);
         giftProgress.classList.add(classReward);
       }
