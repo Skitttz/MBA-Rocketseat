@@ -1,5 +1,8 @@
 # Module Notes
 
+> [!TIP]
+> For optimal visualization, I recommend using [Obsidian](https://obsidian.md/) software, as GitHub's Markdown support is limited.
+
 ## Language
 
 These module notes are currently written in 🇧🇷 Brazilian Portuguese, but are open for English translations.
