@@ -1,6 +1,7 @@
 import { clientByID } from '../../services/client-fetch.js';
 import { formatInputValue } from '../../utils/formatInput.js';
-import { showConfette, showStatsUser } from '../clients/show.js';
+import { showConfette, showStatsUser } from '../client/show.js';
+import { userID } from '../constants/client-dom.js';
 import { showModal } from '../modal.js';
 
 const inputSearchId = document.querySelector('.field-id');
@@ -37,7 +38,12 @@ form.addEventListener('submit', async (event) => {
 
     const { id, name, clientSince, appointmentHistory, loyaltyCard, avatar } =
       dataUser;
-
+    if (id === userID.innerText) {
+      console.log(id);
+      console.log(userID.innerText);
+      showModal(event, 'sameID');
+      return;
+    }
     await showStatsUser(
       id,
       name,

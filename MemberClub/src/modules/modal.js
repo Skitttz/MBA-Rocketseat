@@ -19,6 +19,11 @@ const ObjectMessage = {
     title: 'Usuário não encontrado',
     message: 'Verifique se o ID foi digitado corretamente e tente novamente.',
   },
+  sameSearch: {
+    title: 'Usuário Repetido',
+    message:
+      'Ops! Você inseriu um ID que já foi pesquisado anteriormente. Tente um ID diferente.',
+  },
 };
 
 export function showModal(event, status) {
@@ -60,6 +65,10 @@ function generateMessage(status) {
     case 'invalidID':
       statusMessageModal.textContent = ObjectMessage.invalidID.title;
       messageModal.textContent = ObjectMessage.invalidID.message;
+      break;
+    case 'sameID':
+      statusMessageModal.textContent = ObjectMessage.sameSearch.title;
+      messageModal.textContent = ObjectMessage.sameSearch.message;
       break;
     default:
       break;
