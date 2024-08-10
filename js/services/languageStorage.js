@@ -3,7 +3,7 @@ const LANGUAGE_KEY = 'languageValue';
 function checkLanguage() {
   const existingLanguage = getCurrentLanguage();
   if (!existingLanguage) {
-    return updateLanguage('ptbr');
+    return updateLanguageStorage('ptbr');
   }
   return;
 }
