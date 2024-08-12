@@ -100,7 +100,7 @@ main {
   top: 10px;
 }
 
-@media (max-width: 32rem) {
+@media (max-width: 40rem) {
   .container-language {
     position: relative;
     margin: 0 auto;
