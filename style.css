@@ -100,6 +100,18 @@ main {
   top: 10px;
 }
 
+@media (max-width: 32rem) {
+  .container-language {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    background-color: var(--neon-text-color);
+  }
+}
+
 .text-language,
 .container-language span {
   user-select: none;
