@@ -39,8 +39,6 @@ form.addEventListener('submit', async (event) => {
     const { id, name, clientSince, appointmentHistory, loyaltyCard, avatar } =
       dataUser;
     if (id === userID.innerText) {
-      console.log(id);
-      console.log(userID.innerText);
       showModal(event, 'sameID');
       return;
     }
