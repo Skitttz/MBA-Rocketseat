@@ -12,7 +12,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: auto !important;
 }
+
 
 li {
   list-style: none;
@@ -87,7 +91,6 @@ main {
   user-select: none;
   z-index: 10;
   color: var(--neon-text-color);
-  animation: textflicker 5s infinite alternate-reverse;
 }
 
 .container-language {
