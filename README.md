@@ -1,22 +1,12 @@
 
-<h1 align="center">
-  <div align="center">
-    <img src="https://app.rocketseat.com.br/_next/image?url=https%3A%2F%2Fxesque.rocketseat.dev%2Fplatform%2F1720017956346.svg&w=128&q=75" width="20%" alt="Rocketseat Logo" />
-  </div>
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License"/>
-<div align="center">
-  </div>
-</h1>
-  <div align="center"> <h9><a href="#ptbr">🇧🇷 PT-BR</a> | <a href="#en">🇺🇸 EN-US</a><h9/> </div>
 
+<div id="user-content-toc" align="center"><ul align="center" style="list-style: none;"><summary><h1> MBA Rocketseat</h1> <div align="center"> <h9><a href="#ptbr">🇧🇷 PT-BR</a> | <a href="#en">🇺🇸 EN-US</a><h9/> </div></summary></img></ul></div>
+
+<div  align="center"> <img  src="https://img.shields.io/badge/license-MIT-green" alt="MIT License"></div>
 
 
 <a id="ptbr"></a>
 
-</br>
-
-
-<h1>🇧🇷</h1>
 <p align="center">
   <a href="#visao-geral">🚀 Visão Geral</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#estrutura-do-modulo">🏗️ Estrutura do Módulo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -114,7 +104,6 @@
 
 </br>
 
-<h1>🇺🇸 </h1>
 <a id="en"></a>
 
 </br>
