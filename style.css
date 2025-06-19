@@ -167,6 +167,13 @@ main {
     align-items: center;
     top: 0px;
   }
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .rocket {
+    display: none;
+  }
 }
 
 .text-language,
@@ -177,6 +184,8 @@ main {
 
 .text-language {
   font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--neon-text-color);
   padding: 0.2rem 0.8rem;
   border-radius: 6px;
   cursor: pointer;
